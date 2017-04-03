@@ -1,0 +1,93 @@
+<!doctype html>
+<html ng-app="machineNRT">
+    <head>
+        <meta charset="utf-8">
+        <title>Location IoT</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/table.css"></link>
+
+    <!-- Latest compiled and minified JavaScript -->
+
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="lib/d3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="js/base64EncodeDecode.js"></script>
+    <script type="text/javascript" src="lib/markerclusterer.js"></script>
+    <script src="js/hbaseRestParser.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        google.maps.event.addDomListener(window, 'load', machineNRT.init);
+    </script>
+
+    </head>
+
+<body>
+    <div id="panel">
+
+
+        <div>
+            <input type="checkbox" checked="checked" id="usegmm"/>
+            <span>Use MarkerClusterer</span>
+        </div>
+
+        <div>
+
+            Status:
+            <select id="status">
+                <option value="0">Idle</option>
+                <option value="1">Running</option>
+
+            </select>
+
+            <span>Time used: <span id="timetaken"></span> ms</span>
+        </div>
+
+        <strong>Marker List</strong>
+
+    </div>
+    <div id="filters">
+        <div class="selectRow">
+
+        </div>
+        <select id="machineStatus">
+            <option value="">Status</option>
+            <option value="0">Idle</option>
+            <option value="1">Running</option>
+        </select>
+        <select id="machineRange">
+            <option value="">Machine Id</option>
+            <option value="1000">1-1000</option>
+            <option value="2000">1001-2000</option>
+            <option value="3000">2001-3000</option>
+            <option value="4000">3001-4000</option>
+            <option value="5000">4001-5000</option>
+            <option value="6000">5001-6000</option>
+            <option value="7000">6001-7000</option>
+            <option value="8000">7001-8000</option>
+            <option value="9000">8001-9000</option>
+            <option value="10000">9001-10000</option>
+        </select>
+    </div>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <div id="markerlist">
+
+    </div>
+    
+</body>
+</html>

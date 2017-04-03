@@ -1,0 +1,59 @@
+table {
+    background: #f6f6f6;
+    font-size: 14px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+       -moz-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+            box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+}
+thead {
+    background-color: #f9f9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0,0%,0%,0)), to(hsla(0,0%,0%,.1)));
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:    -moz-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:     -ms-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:      -o-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.75);
+}
+thead td {
+    border: none;
+    color: #444;
+}
+.posts, .snaps, .acorns, .ranking {
+    text-align: center;
+}
+.name {
+    width: 150px;
+}
+.posts {
+    width: 50px;
+}
+.snaps {
+    width: 50px;
+}
+.acorns {
+    width: 50px;
+}
+.ranking {
+    width: 100px;
+}
+tr:nth-child(2n) {  
+   background: #eee;  
+}
+td {
+    border: 1px solid #ccc;
+    color: #777;
+    padding: 15px 10px;
+}
+.admin {
+    color: #c4453c;
+}
+.supporter {
+    color: #207cca;
+}
